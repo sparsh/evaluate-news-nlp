@@ -5,11 +5,14 @@ function handleSubmit(event) {
     let formText = document.getElementById('name').value
 
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/test')
+    fetch(`http://localhost:8080/test?text=${formText}`)
     .then(res => res.json())
     .then(function(res) {
-        console.log("The res is ", res)
-        document.getElementById('results').innerHTML = res.message
+        const text = 
+        `Aggreement: ${res.agreement} <br>
+         Subjectivity: ${res.subjectivity} <br>
+         Confidence: ${res.confidence}`
+        document.getElementById('results').innerHTML = text
     })
 }
 

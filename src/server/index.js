@@ -35,10 +35,11 @@ app.get('/test', function (req, res) {
       body: formdata,
       redirect: 'follow'
     };
-    
-    fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions)
+    const url = "https://api.meaningcloud.com/sentiment-2.1";
+    fetch(url, requestOptions)
       .then(response => response.json())
       .then((result) => {
+          console.log("Sending", result);
           res.send(result);
       })
       .catch(error => {
