@@ -1,8 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const path = require("path");
-const webpack = require("webpack");
+
 module.exports = {
   mode : 'development',
   entry: "./src/client/index.js",
