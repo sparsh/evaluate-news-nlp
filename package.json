@@ -13,7 +13,10 @@
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/node_modules/**"
-    ]
+    ],
+    "moduleNameMapper":{
+      "\\.(scss)$": "<rootDir>/__mocks__/styleMock.js"
+  }
   },
   "keywords": [],
   "author": "",
